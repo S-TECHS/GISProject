@@ -6,15 +6,6 @@ from streamlit_folium import st_folium
 import streamlit as st
 import streamlit.components.v1 as components
 
-st.subheader("💬 Leave a Comment")
-
-components.iframe(
-    "https://docs.google.com/forms/d/e/1FAIpQLScktoA93f0fXcwb9xZdqmVVQRtVTKdpUrUJqTyfI9F6GIorKg/viewform?embedded=true",
-    width=640,
-    height=509
-)
-
-
 # Set page config
 st.set_page_config(page_title="Community Projects Map", layout="wide",page_icon="🌍")
 
@@ -60,3 +51,11 @@ for idx, row in df.iterrows():
 st.subheader("🗺️ Map")
 st.markdown("Lhoreen's Community Map")
 st_folium(m, width=1200, height=600)
+
+st.subheader("💬 Leave a Comment")
+
+components.iframe(
+    "https://docs.google.com/forms/d/e/1FAIpQLScktoA93f0fXcwb9xZdqmVVQRtVTKdpUrUJqTyfI9F6GIorKg/viewform?embedded=true",
+    width=640,
+    height=509
+)
