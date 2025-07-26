@@ -10,7 +10,7 @@ st.set_page_config(page_title="Community Projects Map", layout="wide", page_icon
 st.markdown("""
     <h1 style='text-align: center; color: #2c3e50;'>📍 Community Projects in Surigao City</h1>
     <p style='text-align: center; color: #7f8c8d; font-size: 18px;'>
-        An interactive map showing services offered across various communities in Surigao City.
+        An interactive map for Surigao City.
     </p>
 """, unsafe_allow_html=True)
 
