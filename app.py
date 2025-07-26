@@ -24,7 +24,7 @@ with st.expander("📊 View Raw Data"):
     st.dataframe(df)
 
 # Create Folium map
-m = folium.Map(location=[9.789, 125.49], zoom_start=13, tiles="CartoDB Dark_Matter")
+m = folium.Map(location=[9.789, 125.49], zoom_start=13)
 
 # Add markers
 for _, row in df.iterrows():
@@ -43,5 +43,5 @@ for _, row in df.iterrows():
 
 # Display map
 st.subheader("🗺️ Map of Services")
-st.markdown("Hello")
+st.markdown("Lhoreen's Community Map")
 st_folium(m, width=1200, height=600)
