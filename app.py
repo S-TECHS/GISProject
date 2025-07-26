@@ -55,6 +55,6 @@ st.markdown("<div style='margin-top: -40px;'></div>", unsafe_allow_html=True)
 st.subheader("💬 Leave a Comment")
 components.iframe(
     "https://docs.google.com/forms/d/e/1FAIpQLScktoA93f0fXcwb9xZdqmVVQRtVTKdpUrUJqTyfI9F6GIorKg/viewform?embedded=true",
-    width=640,
-    height=509
+    width=700,
+    height=600
 )
