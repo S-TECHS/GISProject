@@ -40,11 +40,12 @@ for idx, row in df.iterrows():
         location=[row['Latitude'], row['Longitude']],
         popup=popup_content,
         icon=folium.DivIcon(html=f"""
-            <div style='background-color:blue; color:white; border-radius:50%; width:28px; height:28px; text-align:center; line-height:28px; font-size:12pt'>
-                {idx + 1}
+            <div style='background-color:#007bff; color:white; border-radius:50%; width:28px; height:28px; text-align:center; line-height:28px; font-weight:bold; font-size:12px;'>
+                {idx}
             </div>
         """)
     ).add_to(m)
+
 
 
 # Display map
