@@ -10,7 +10,7 @@ st.set_page_config(page_title="Community Projects Map", layout="wide", page_icon
 st.markdown("""
     <h1 style='text-align: center; color: #2c3e50;'>📍 Community Projects in Surigao City</h1>
     <p style='text-align: center; color: #7f8c8d; font-size: 18px;'>
-        An interactive map for Surigao City.
+        An interactive map for Surigao City(Eyyy).
     </p>
 """, unsafe_allow_html=True)
 
@@ -29,7 +29,7 @@ with st.expander("📊 Click to view full raw data", expanded=False):
     st.dataframe(df, use_container_width=True, height=350)
 
 # Create Folium map
-m = folium.Map(location=[9.789, 125.49], zoom_start=13, tiles="CartoDB positron")
+m = folium.Map(location=[9.789, 125.49], zoom_start=13)
 
 # Add markers to map
 for _, row in df.iterrows():
