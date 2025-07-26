@@ -12,7 +12,6 @@ st.title("📍 Community Projects in Surigao City")
 sheet_url = "https://docs.google.com/spreadsheets/d/1m0ogJcjKHu3bl9dXjEjso0RzlaktAugi2HF7xSwMzrU/export?format=csv"
 
 # Load data
-@st.cache_data
 def load_data(url):
     return pd.read_csv(url)
 
@@ -46,6 +45,6 @@ for idx, row in df.iterrows():
 
 
 # Display map
-st.subheader("🗺️ Map of Services")
+st.subheader("🗺️ Map")
 st.markdown("Lhoreen's Community Map")
 st_folium(m, width=1200, height=600)
