@@ -3,6 +3,15 @@ import pandas as pd
 import folium
 from streamlit_folium import st_folium
 
+import streamlit as st
+import streamlit.components.v1 as components
+
+st.title("Comments Section")
+
+# Embed Disqus using iframe workaround
+disqus_url = "https://gisproject.disqus.com/embed"
+components.iframe(disqus_url, height=500, scrolling=True)
+
 # Set page config
 st.set_page_config(page_title="Community Projects Map", layout="wide",page_icon="🌍")
 
