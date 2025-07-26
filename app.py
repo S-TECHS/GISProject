@@ -17,6 +17,7 @@ def load_data(url):
     return pd.read_csv(url)
 
 df = load_data(sheet_url)
+df.index = df.index + 1  # Make index start at 1
 
 # Display data table
 with st.expander("📊 View Raw Data"):
