@@ -3,11 +3,10 @@ import pandas as pd
 import folium
 from streamlit_folium import st_folium
 
-import streamlit as st
 import streamlit.components.v1 as components
 
 # Set page config
-st.set_page_config(page_title="Community Projects Map", layout="wide",page_icon="🌍")
+st.set_page_config(page_title="Community Projects Map", layout="wide", page_icon="🌍")
 
 st.title("📍 Community Projects in Surigao City")
 
@@ -44,16 +43,16 @@ for idx, row in df.iterrows():
         icon=folium.Icon(color="blue", icon="info-sign")
     ).add_to(m)
 
-
-
-
 # Display map
 st.subheader("🗺️ Map")
 st.markdown("Lhoreen's Community Map")
 st_folium(m, width=1200, height=600)
 
-st.subheader("💬 Leave a Comment")
+# Reduce vertical spacing
+st.markdown("<div style='margin-top: -40px;'></div>", unsafe_allow_html=True)
 
+# Comment section
+st.subheader("💬 Leave a Comment")
 components.iframe(
     "https://docs.google.com/forms/d/e/1FAIpQLScktoA93f0fXcwb9xZdqmVVQRtVTKdpUrUJqTyfI9F6GIorKg/viewform?embedded=true",
     width=640,
