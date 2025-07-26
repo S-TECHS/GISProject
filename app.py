@@ -27,7 +27,7 @@ with st.expander("📊 View Raw Data"):
 m = folium.Map(location=[9.789, 125.49], zoom_start=13)
 
 # Add markers
-for _, row in df.iterrows():
+for idx, row in df.iterrows():
     popup_content = f"""
     <b>Community:</b> {row['Community']}<br>
     <b>Year:</b> {row['Year']}<br>
@@ -35,11 +35,17 @@ for _, row in df.iterrows():
     <b>Population:</b> {row['Population']}<br>
     <b>Description:</b> {row['Description']}
     """
+    
     folium.Marker(
         location=[row['Latitude'], row['Longitude']],
         popup=popup_content,
-        icon=folium.Icon(color="blue", icon="info-sign")
+        icon=folium.DivIcon(html=f"""
+            <div style='background-color:blue; color:white; border-radius:50%; width:28px; height:28px; text-align:center; line-height:28px; font-size:12pt'>
+                {idx + 1}
+            </div>
+        """)
     ).add_to(m)
+
 
 # Display map
 st.subheader("🗺️ Map of Services")
