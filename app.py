@@ -29,22 +29,19 @@ m = folium.Map(location=[9.789, 125.49], zoom_start=13)
 # Add markers
 for idx, row in df.iterrows():
     popup_content = f"""
+    <b>No:</b> {idx + 1}<br>
     <b>Community:</b> {row['Community']}<br>
     <b>Year:</b> {row['Year']}<br>
     <b>Service:</b> {row['Service_Type']}<br>
     <b>Population:</b> {row['Population']}<br>
     <b>Description:</b> {row['Description']}
     """
-    
     folium.Marker(
         location=[row['Latitude'], row['Longitude']],
         popup=popup_content,
-        icon=folium.DivIcon(html=f"""
-            <div style='background-color:#007bff; color:white; border-radius:50%; width:28px; height:28px; text-align:center; line-height:28px; font-weight:bold; font-size:12px;'>
-                {idx}
-            </div>
-        """)
+        icon=folium.Icon(color="blue", icon="info-sign")
     ).add_to(m)
+
 
 
 
