@@ -24,7 +24,7 @@ with st.expander("📊 View Raw Data"):
     st.dataframe(df)
 
 # Create Folium map
-m = folium.Map(location=[9.789, 125.49], zoom_start=13, tiles="CartoDB Positron")
+m = folium.Map(location=[9.789, 125.49], zoom_start=13, tiles="CartoDB Dark_Matter")
 
 # Add markers
 for _, row in df.iterrows():
