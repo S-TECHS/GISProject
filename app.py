@@ -29,7 +29,7 @@ m = folium.Map(location=[9.789, 125.49], zoom_start=13)
 # Add markers
 for idx, row in df.iterrows():
     popup_content = f"""
-    <b>No:</b> {idx + 1}<br>
+    <b>No:</b> {idx}<br>
     <b>Community:</b> {row['Community']}<br>
     <b>Year:</b> {row['Year']}<br>
     <b>Service:</b> {row['Service_Type']}<br>
